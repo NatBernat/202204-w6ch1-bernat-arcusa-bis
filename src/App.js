@@ -1,5 +1,5 @@
+import toDosList from "./components/data/data";
 import ToDosPage from "./components/ToDosPage/ToDosPage";
-import toDosList from "../data/data";
 
 function App() {
   return (
