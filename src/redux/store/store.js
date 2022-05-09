@@ -3,7 +3,7 @@ import { toDosReducer } from "./features/toDos/toDosSlice";
 
 const store = configureStore({
   reducer: {
-    projects: toDosReducer,
+    toDos: toDosReducer,
   },
 });
 

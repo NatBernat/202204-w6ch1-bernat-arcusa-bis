@@ -1,10 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-const toDosSlice = () => {};
-
-export default toDosSlice;
-
-const projectsSlice = createSlice({
+const toDosSlice = createSlice({
   name: "toDos",
   initialState: [],
   reducers: {
@@ -12,6 +8,6 @@ const projectsSlice = createSlice({
   },
 });
 
-export const { loadToDos: loadToDosActionCreator } = projectsSlice.actions;
+export const { loadToDos: loadToDosActionCreator } = toDosSlice.actions;
 
 export const toDosReducer = toDosSlice.reducer;

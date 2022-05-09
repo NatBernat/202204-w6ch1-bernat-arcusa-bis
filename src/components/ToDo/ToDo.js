@@ -1,11 +1,11 @@
 const ToDo = ({ toDo: { id, name, done } }) => {
   return (
-    <>
-      <h2>{`${id} - ${name}`}</h2>
-      <p>{done}</p>
+    <li>
+      <h2>{`${id}: ${name}`}</h2>
+      <p>{done ? "Done!" : "Pending"}</p>
       <button>Edit</button>
       <button>Delete</button>
-    </>
+    </li>
   );
 };
 
