@@ -27,7 +27,7 @@ const ToDoForm = () => {
         New to do
         <input type="text" name="name" onChange={changeName} />
       </label>
-      <input type="submit" value="Add" />
+      <button type="submit">Add</button>
     </form>
   );
 };
