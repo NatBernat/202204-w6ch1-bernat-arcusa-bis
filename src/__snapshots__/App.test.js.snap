@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Given an App component When rendered Then it should always match this snapshot 1`] = `
+<div
+  className="App"
+>
+  <h1>
+    Things To Do
+  </h1>
+  <form
+    autoComplete="off"
+    onSubmit={[Function]}
+  >
+    <label>
+      New to do
+      <input
+        name="name"
+        onChange={[Function]}
+        type="text"
+      />
+    </label>
+    <button
+      type="submit"
+    >
+      Add
+    </button>
+  </form>
+  <ul />
+</div>
+`;
