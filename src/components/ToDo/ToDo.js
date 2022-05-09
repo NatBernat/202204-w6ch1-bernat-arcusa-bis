@@ -1,10 +1,17 @@
+import { useDispatch } from "react-redux";
+import { removeToDosActionCreator } from "../../redux/store/features/toDos/toDosSlice";
+
 const ToDo = ({ toDo: { id, name, done } }) => {
+  const dispatch = useDispatch();
+
+  const removeToDo = () => dispatch(removeToDosActionCreator(id));
+
   return (
     <li>
       <h2>{`${id}: ${name}`}</h2>
       <p>{done ? "Done!" : "Pending"}</p>
       <button>Edit</button>
-      <button>Delete</button>
+      <button onClick={removeToDo}>Delete</button>
     </li>
   );
 };
