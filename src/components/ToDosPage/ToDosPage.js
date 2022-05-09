@@ -1,14 +1,15 @@
+import { useSelector } from "react-redux";
 import ToDo from "../ToDo/ToDo";
 
-const ToDosPage = ({ toDosList }) => {
+const ToDosPage = () => {
+  const toDos = useSelector((state) => state.toDos);
   return (
     <>
       <h1>Things To Do:</h1>
       <ul>
-        {toDosList.map((toDo) => {
-          return <ToDo key={toDo.id} toDo={toDo} />;
-        })}
-        ;
+        {toDos.map((toDo) => (
+          <ToDo toDo={toDo} key={toDo.id} />
+        ))}
       </ul>
     </>
   );
