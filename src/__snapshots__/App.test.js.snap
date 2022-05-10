@@ -1,22 +1,22 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Given an App component When rendered Then it should always match this snapshot 1`] = `
-<div
-  className="App"
->
+Array [
   <h1>
     Things To Do
-  </h1>
+  </h1>,
   <form
     autoComplete="off"
+    className="sc-bczRLJ eevGZu"
     onSubmit={[Function]}
   >
     <label>
-      New to do
+      New to do:
       <input
         name="name"
         onChange={[Function]}
         type="text"
+        value=""
       />
     </label>
     <button
@@ -24,7 +24,9 @@ exports[`Given an App component When rendered Then it should always match this s
     >
       Add
     </button>
-  </form>
-  <ul />
-</div>
+  </form>,
+  <ul
+    className="sc-dkzDqf hHMQjO"
+  />,
+]
 `;

@@ -1,5 +1,6 @@
 import { useDispatch } from "react-redux";
 import { removeToDosActionCreator } from "../../redux/store/features/toDos/toDosSlice";
+import ToDoStyled from "./ToDoStyled";
 
 const ToDo = ({ toDo: { id, name, done } }) => {
   const dispatch = useDispatch();
@@ -7,12 +8,15 @@ const ToDo = ({ toDo: { id, name, done } }) => {
   const removeToDo = () => dispatch(removeToDosActionCreator(id));
 
   return (
-    <li>
-      <h2>{`${name} (#${id})`}</h2>
-      <p>{done ? "Done!" : "Pending"}</p>
-      <button>Edit</button>
-      <button onClick={removeToDo}>Delete</button>
-    </li>
+    <ToDoStyled>
+      <p className="to-do__id">#{id}</p>
+      <h2>{name}</h2>
+      <p className="to-do__status">{done ? "Done!" : "Pending"}</p>
+      <section>
+        <button>Edit</button>
+        <button onClick={removeToDo}>Delete</button>
+      </section>
+    </ToDoStyled>
   );
 };
 
