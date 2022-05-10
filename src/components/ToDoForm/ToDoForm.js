@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { addNewToDoActionCreator } from "../../redux/store/features/toDos/toDosSlice";
+import ToDoFormStyled from "./ToDoFormStyled";
 
 const ToDoForm = () => {
   const [name, setName] = useState("");
@@ -15,20 +16,20 @@ const ToDoForm = () => {
     event.preventDefault();
     const newToDo = {
       id: Date.now(),
-      name: name,
+      name,
       done: false,
     };
     dispatch(addNewToDoActionCreator(newToDo));
   };
 
   return (
-    <form autoComplete="off" onSubmit={addToDoTask}>
+    <ToDoFormStyled autoComplete="off" onSubmit={addToDoTask}>
       <label>
-        New to do
-        <input type="text" name="name" onChange={changeName} />
+        New to do:
+        <input type="text" name="name" value={name} onChange={changeName} />
       </label>
       <button type="submit">Add</button>
-    </form>
+    </ToDoFormStyled>
   );
 };
 

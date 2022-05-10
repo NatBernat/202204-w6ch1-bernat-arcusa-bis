@@ -13,11 +13,11 @@ function App() {
   }, [dispatch]);
 
   return (
-    <div className="App">
+    <>
       <h1>Things To Do</h1>
       <ToDoForm />
       <ToDosPage />
-    </div>
+    </>
   );
 }
 
